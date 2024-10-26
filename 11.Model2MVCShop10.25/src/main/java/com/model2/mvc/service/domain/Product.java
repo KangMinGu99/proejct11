@@ -2,8 +2,6 @@ package com.model2.mvc.service.domain;
 
 import java.sql.Date;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class Product {
 
 	private String fileName; //String 타입의 상품 이미지 파일 이름
@@ -16,7 +14,6 @@ public class Product {
 	private String proTranCode;
 	// JSON ==> Domain Object  Binding을 위해 추가된 부분
 	private String regDateString;
-	private MultipartFile mulitpartfile;  //파일 업로드를 위한 부분
 	
 	public Product() {
 	}
@@ -99,14 +96,6 @@ public class Product {
 		return "ProductVO : [fileName]" + fileName
 				+ "[manuDate]" + manuDate+ "[price]" + price + "[prodDetail]" + prodDetail
 				+ "[prodName]" + prodName + "[prodNo]" + prodNo;
-	}
-
-	public MultipartFile getMulitpartfile() {
-		return mulitpartfile;
-	}
-
-	public void setMulitpartfile(MultipartFile mulitpartfile) {
-		this.mulitpartfile = mulitpartfile;
 	}
 
 	
